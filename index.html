@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<script src="js/jquery.min.js"></script>
+		
+		<script src="js/jquery.mobile-1.4.0.min.js"></script>
+		<script src="js/pieChart.js"></script>
+
+	<style>
+        /*---------needed for chart-------------*/
+		.svg-pie-container,.svg-bar-container{
+			-webkit-transform-origin: 50% 50%;
+			height:410px;
+			width:410px;
+			background: none;
+			overflow: hidden;
+		}
+		.scrollable ,.rotatable{
+			-webkit-transition-duration: .5s;
+
+		}
+		.scrollable {
+			width:1000px;
+		}
+        
+		.dummy-circle {
+			height: 250px;
+			width: 250px;
+			border-radius: 50%;
+			background: white;
+			position: relative;
+			top: -81%;
+			left: 19.5%;
+		}
+        /*---------------------------------------*/
+		body{
+			background:black;
+		}
+		.svg-bar-container{
+            background: white;
+            border-radius: 5px;
+		}
+		.uparrow{
+			width: 0; 
+			height: 0; 
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-bottom: 20px solid black;
+			z-index:4;
+		}
+		#pie-pointer {
+			position: relative;
+			top: -283px;
+			left: 180px;
+		}
+		#bar-pointer {
+			position: relative;
+			top: -34px;
+			left: 180px;
+		}
+        .barHolder {
+            height: 400px;
+            width: 400px;
+            position: absolute;
+            top: 19px;
+            left: 550px;
+        }
+        .pieholder {
+            height: 400px;
+            width: 400px;
+        }
+
+
+	</style>
+	</head>
+
+	<body>
+		<div class ="pieHolder">
+		<div class="svg-pie-container">
+			<div class="rotatable">
+				<svg height="410px" width="410px" id="svg-pie" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        	
+        		</svg>
+        	</div>
+        	<div class="dummy-circle"></div>
+        	<div class="uparrow" id = "pie-pointer"></div>
+        </div>
+   	 </div>
+   	 <div class ="barHolder">
+        <div class="svg-bar-container">
+        	<div class="scrollable">
+        		<svg height="410px" width="1000px" id="svg-bar" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        			
+        		</svg>
+        	</div>
+        	<div class="uparrow" id = "bar-pointer"></div>
+       	</div>
+      </div>
+
+	</body>
+
+</html>
